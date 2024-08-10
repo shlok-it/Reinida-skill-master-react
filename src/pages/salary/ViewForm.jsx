@@ -131,7 +131,7 @@ const ViewForm = (props) => {
                 }}
               >
                 {" "}
-                Reindia Technology Service Pvt. Ltd.
+                The Reindia Skill Welfare Foundation (RSWE).
               </strong>{" "}
               <br />
               <strong
@@ -142,11 +142,11 @@ const ViewForm = (props) => {
                 Reindia skill one step skill for life
               </strong>
               <br />
-              <strong> 2nd floor RDK Tower, Nearby Diwan Hospital,</strong>
+              <strong> 9 & 10 , 2nd Floor, Shaheed Veer Narayan Vyavsaik Parisar,</strong>
               <br />
               <strong>
                 {" "}
-                Bhatagaon Chowk Raipur Chhattisgarh India 492001{" "}
+                Ghadi Chowk, Raipur Chhattisgarh 492001{" "}
               </strong>
             </div>
             <div
