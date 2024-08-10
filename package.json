@@ -1,0 +1,65 @@
+{
+  "name": "reindia",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://reindiaskill.com/master",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.2.1",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "aos": "^2.3.4",
+    "classnames": "^2.5.1",
+    "formik": "^2.4.5",
+    "react": "^18.2.0",
+    "react-beautiful-dnd": "^13.1.1",
+    "react-data-table-component": "^7.6.2",
+    "react-dom": "^18.2.0",
+    "react-flatpickr": "^3.10.13",
+    "react-loader-spinner": "^6.1.6",
+    "react-onesignal": "^3.0.1",
+    "react-redux": "^9.1.0",
+    "react-router-dom": "^6.22.3",
+    "react-scripts": "5.0.1",
+    "react-secure-storage": "^1.3.2",
+    "react-toastify": "^10.0.5",
+    "reactstrap": "^9.2.2",
+    "reselect": "^5.1.0",
+    "simplebar-react": "^3.2.4",
+    "suneditor-react": "^3.6.1",
+    "sweetalert2": "^11.10.6",
+    "web-vitals": "^2.1.4",
+    "yup": "^1.4.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "sass": "^1.72.0"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
+}

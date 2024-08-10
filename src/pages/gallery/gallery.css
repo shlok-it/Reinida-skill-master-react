@@ -1,0 +1,45 @@
+.img-thumbnail-cat{
+    height: 50px;
+    width: 80px;
+    position: relative;
+}
+.img-thumbnail-cat>img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+}
+.img-slide-cat{
+    height: 50px;
+    width: 150px;
+    position: relative;
+}
+.img-slide-cat>img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+}
+.img-achievmente-cat{
+    height: 100px;
+    width: 60px;
+    position: relative;
+}
+.img-achievmente-cat>img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+}

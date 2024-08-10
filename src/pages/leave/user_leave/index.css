@@ -1,0 +1,27 @@
+.img-career-cat{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    position: relative;
+}
+.img-career-cat>img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+}
+.prevImage{
+    max-height: 130px;
+    width: 100px;
+    box-shadow: 0 0 4px 0 #646464;
+    border-radius: 10px;
+}
+.detail-section{
+    background-color: aliceblue;
+    padding: 20px 10px;
+    color: #000;
+}
