@@ -288,10 +288,17 @@ const Navdata = () => {
           link: "/teachers",
           parentId: "teachers",
         },
+       
         {
           id: "teachers-account",
           label: "Teachers Account",
           link: "/teachers-account-list",
+          parentId: "teachers",
+        },
+        {
+          id: "terminated-teachers",
+          label: "Terminated Teachers",
+          link: "/terminated-teachers",
           parentId: "teachers",
         },
         // {

@@ -146,7 +146,7 @@ const ViewForm = (props) => {
               <br />
               <strong>
                 {" "}
-                Ghadi Chowk, Raipur Chhattisgarh 492001{" "}
+                Ghadi Chowk, Raipur Chhattisgarh India 492001{" "}
               </strong>
             </div>
             <div

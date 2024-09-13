@@ -126,17 +126,17 @@ const ViewForm = (props) => {
                   }}
                 />
                 <p>
-                  <strong>2nd floor RDK Tower, Near by Diwan Hospital,</strong>
+                  <strong>9 & 10 , 2nd Floor, Shahid Veer Narayan,</strong>
                   <br />
                   <strong>
-                    Bhatagaon Chowk Raipur Chhattisgarh(CT) India 492001
+                  Vyavsaik Parisar, Ghadi Chowk, Raipur Chhattisgarh 492001
                   </strong>
                   <br />
                   <strong>
-                    Web:- www.reindiaskill.com Email:-info@reindiaskill.com
+                    Web:- www.reindiaskill.com Email:- reindiaskill@gmail.com
                   </strong>
                   <br />
-                  <strong>Contact: 011-69290-362</strong>
+                  <strong>Contact: +91-7898714443</strong>
                 </p>
               </div>
               <div

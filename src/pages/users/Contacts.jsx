@@ -61,6 +61,42 @@ const Contacts = () => {
 		)
 	}
 
+	const changeStatus = (dataParam) => {
+		Swal.fire({
+			title: `Do you want to ${dataParam.status === '1' ? 'Inactive' : 'Active'} ${dataParam.full_name} ? `,
+			icon: "warning",
+			showCancelButton: true,
+			confirmButtonText: 'Yes',
+		}).then((res) => {
+			if (res.isConfirmed) {
+				handleChange(dataParam);
+			} 
+		});
+	};
+	const handleChange = (dataItem) => {
+		let dataParam = { 'emp_id': dataItem.id };
+		call_secure_api('users/updateStatus', dataParam)
+			.then(
+				(resolve) => {
+					if (resolve.status == true) {
+						toast.success(resolve.message, 'success', 2000);
+						const updatedRows = data.map(item=>{
+							if(item.id === dataItem.id){
+								return {...item,status:item.status==='1'?0:1}
+							}
+							return item;
+						})
+						setData(()=>updatedRows);	
+					}
+					else {
+						toast.warning(resolve.message, 'error', 2000);
+					}
+				},
+				(reject) => {
+					console.log(reject);
+				}
+			)
+	}
 	const uploadImage = (employee) => {
 		setDisplay(<UploadProfilepic employee={employee} model_handler={parent_handler} />);
 	}
@@ -97,7 +133,7 @@ const Contacts = () => {
 
 	const deleteEmp = (id) => {
 		Swal.fire({
-			title: "Do you want to delete this?",
+			title: "Do you want to Terminate this?",
 			icon: "warning",
 			showCancelButton: true,
 			confirmButtonText: "Yes",
@@ -176,20 +212,17 @@ const Contacts = () => {
 				name: "Status",
 				cell: (d) => {
 					return (
-						<div>{d.status === "1" ?
-							<span className="badge rounded-pill text-success bg-light-success"><i className='fa fa-circle me-1'></i>Active</span>
-							:
-							d.status === "2" ?
-								<span className="badge rounded-pill text-success bg-light-success"><i className='fa fa-circle me-1'></i>Expired</span>
-								:
-								<span className="badge rounded-pill text-danger bg-light-danger"><i className='fa fa-circle me-1'></i>Pending</span>
-						}
+						<div>
+							<button className={" badge rounded-pill " +
+								(d.status === "1" ? "text-success bg-light-success" : "text-danger bg-light-danger")
+							} onClick={(e) => changeStatus(d)}><i className='fa fa-circle me-1'></i>{d.status === '1' ? 'Active' : "Inactive"}</button>
 						</div>
 					);
 				},
 				wrap: true,
 				width: "80px"
 			},
+
 			{
 				name: "Created",
 				selector: (row) => row.created_at,
@@ -204,7 +237,7 @@ const Contacts = () => {
 						<div className='d-flex'> <button className="btn btn-xs btn-info text-nowrap" onClick={(e) => { document(d) }} >Doc</button>
 							{/* {currentUser.master_role != 'MANAGER' && <button className="btn btn-xs mx-1 btn-success" onClick={(e) => { editEmp(item) }}>Edit</button>} */}
 							<Link className="btn btn-xs mx-1 btn-success text-nowrap" to={'/teachers/' + d.reg_code}>View</Link>
-							{currentUser.master_role == 'HEADADMIN' && <button className="btn btn-xs btn-danger text-nowrap" onClick={(e) => { deleteEmp(d.id) }} >Delete</button>}
+							<button className="btn btn-xs btn-danger text-nowrap" onClick={(e) => { deleteEmp(d.id) }} >Terminate</button>
 						</div>
 					);
 				},
@@ -261,9 +294,9 @@ const Contacts = () => {
 							</button>
 						</div>
 						<div className="ms-auto">
-							{currentUser.master_role != 'MANAGER' && <div className="ms-auto">
+							<div className="ms-auto">
 								<button onClick={() => addNewEmployee()} className="btn btn-primary radius-30 mt-2 mt-lg-0"><i className="bx bxs-plus-square"></i>Add New Teacher</button>
-							</div>}
+							</div>
 						</div>
 					</div>
 

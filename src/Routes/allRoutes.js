@@ -28,6 +28,7 @@ const ChangePassword = React.lazy(() => import('../pages/ChangePassword'));
 const ListVacancies = React.lazy(() => import('../pages/vacancies/Listing'));
 const UsersWorklist = React.lazy(() => import('../pages/users_work/Listing'));
 const UsersWorklistTime = React.lazy(() => import('../pages/users_work_time/Listing'));
+const TerminatedTeacher = React.lazy(() => import('../pages/users/TerminatedTeacher'));
 const Contacts = React.lazy(() => import('../pages/users/Contacts'));
 const BankDetail = React.lazy(() => import('../pages/users/BankDetail'));
 const UserOverView = React.lazy(() => import('../pages/users/UserOverView'));
@@ -47,6 +48,7 @@ const authProtectedRoutes = [
   { path: "/vacancies", exact: true, component: <ListVacancies /> },
   { path: "/Working-list", exact: true, component: <UsersWorklist /> },
   { path: "/working-time", exact: true, component: <UsersWorklistTime /> },
+  { path: "/terminated-teachers", exact: true, component: <TerminatedTeacher /> },
   { path: "/teachers", exact: true, component: <Contacts /> },
   { path: "/teachers-account-list", exact: true, component: <BankDetail /> },
   { path: "/teachers/:reg_code", exact: true, component: <UserOverView /> },
