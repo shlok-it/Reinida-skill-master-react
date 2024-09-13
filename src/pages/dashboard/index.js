@@ -48,22 +48,23 @@ const Dashboard = () => {
 					if (resolve.status === true) {
 						const data = resolve.data;
 						if (data) {
+							
 							const data_para = [
-								{
+								{	'icon':'mdi-school',
 									"url": 'teachers', 'name': "Teachers",
 									'value': (data['total_users'] || 0),
 									'class': "text-info"
 								},
-								{ "url": 'todayattendance', 'name': "Today check in", "value": data['today_check_in'] || 0, "class": "text-danger" },
-								{ "url": 'todayattendance', 'name': "Today check out", "value": data['today_check_out'] || 0, "class": "text-success" },
-								{ "url": 'leave-list', 'name': "Pending Leave Request", "value": data['pending_leave_request'] || 0, "class": "text-primary" },
-								{ "url": 'galleryimage', 'name': "Gallery Image", "value": data['gallery_image'] || 0, "class": "text-danger" },
-								{ "url": 'galleycategory', 'name': "Gallery Category", "value": data['gallery_category'] || 0, "class": "text-success" },
-								{ "url": 'galleryvideo', 'name': "Video", "value": data['galleryvideo'] || 0, "class": "text-dark" },
-								{ "url": 'career', 'name': "Career Forms", "value": data['career'] || 0, "class": "text-warning" },
-								{ "url": 'location/district', 'name': "Total States", "value": data['total_States'] || 0, "class": "text-danger" },
-								{ "url": 'location/district', 'name': "Total Districts", "value": data['total_districts'] || 0, "class": "text-warning" },
-								{ "url": 'location/block', 'name': "Total Blocks", "value": data['total_Blocks'] || 0, "class": "text-success" },
+								{ 'icon':'mdi-login',"url": 'todayattendance', 'name': "Today check in", "value": data['today_check_in'] || 0, "class": "text-danger" },
+								{ 'icon':'mdi-logout',"url": 'todayattendance', 'name': "Today check out", "value": data['today_check_out'] || 0, "class": "text-success" },
+								{ 'icon':'mdi-timetable',"url": 'leave-list', 'name': "Pending Leave Request", "value": data['pending_leave_request'] || 0, "class": "text-primary" },
+								{ 'icon':'mdi-image',"url": 'galleryimage', 'name': "Gallery Image", "value": data['gallery_image'] || 0, "class": "text-danger" },
+								{ 'icon':'mdi-image-multiple',"url": 'galleycategory', 'name': "Gallery Category", "value": data['gallery_category'] || 0, "class": "text-success" },
+								{ 'icon':'mdi-video',"url": 'galleryvideo', 'name': "Video", "value": data['galleryvideo'] || 0, "class": "text-dark" },
+								{ 'icon':'mdi-note-text',"url": 'career', 'name': "Career Forms", "value": data['career'] || 0, "class": "text-warning" },
+								{ 'icon':'mdi-map',"url": 'location/district', 'name': "Total States", "value": data['total_States'] || 0, "class": "text-danger" },
+								{ 'icon':'mdi-map-marker-distance',"url": 'location/district', 'name': "Total Districts", "value": data['total_districts'] || 0, "class": "text-warning" },
+								{ 'icon':'mdi-pin',"url": 'location/block', 'name': "Total Blocks", "value": data['total_Blocks'] || 0, "class": "text-success" },
 							];
 							setDashboardData(data_para);
 						}
@@ -91,7 +92,7 @@ const Dashboard = () => {
 										<Link to={"../" + item.url} className="mb-0 font-13 btn text-primary "><u>View</u></Link>
 									</div>
 									<div className="widgets-icons-2 ms-auto">
-										<i className="mdi mdi-account-multiple-outline"></i>
+										<i className={"mdi mdi-36px "+item.icon}></i>
 									</div>
 								</div>
 							</div>
